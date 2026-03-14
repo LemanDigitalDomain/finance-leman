@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Finance Léman | Gestion de patrimoine & Conseil financier – Bassin lémanique</title>
+    <meta name="description" content="Cabinet de conseil financier et de gestion de patrimoine au service des résidents et entrepreneurs du bassin lémanique. Planification financière, optimisation fiscale et stratégies d'investissement à Genève et Lausanne.">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;600;700&display=swap');
+        :root {
+            --navy: #0B132B; --navy-light: #1C2541; --gold: #C9A84C; --gold-light: #D4B968;
+            --silver: #8D99AE; --light: #F5F3EE; --white: #FFFFFF; --text: #2C2C2C; --text-light: #555555;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Inter', sans-serif; color: var(--text); line-height: 1.7; background: var(--white); }
+        nav { background: var(--navy); padding: 20px 0; position: sticky; top: 0; z-index: 100; box-shadow: 0 2px 20px rgba(0,0,0,0.3); }
+        .nav-inner { max-width: 1100px; margin: 0 auto; padding: 0 30px; display: flex; justify-content: space-between; align-items: center; }
+        .nav-brand { font-family: 'Playfair Display', serif; color: var(--white); font-size: 1.4rem; font-weight: 600; letter-spacing: 1px; text-decoration: none; }
+        .nav-brand span { color: var(--gold); }
+        .nav-links { display: flex; gap: 30px; }
+        .nav-links a { color: var(--silver); text-decoration: none; font-size: 0.85rem; font-weight: 400; letter-spacing: 0.5px; text-transform: uppercase; transition: color 0.3s; }
+        .nav-links a:hover, .nav-links a.active { color: var(--gold); }
+        .hero { background: linear-gradient(145deg, var(--navy), var(--navy-light)); color: var(--white); padding: 100px 30px; text-align: center; }
+        .hero h1 { font-family: 'Playfair Display', serif; font-size: 2.8rem; font-weight: 700; margin-bottom: 15px; letter-spacing: 1px; }
+        .hero h1 span { color: var(--gold); }
+        .hero .subtitle { font-size: 1.1rem; color: var(--silver); font-weight: 300; max-width: 650px; margin: 0 auto 40px; }
+        .hero .divider { width: 60px; height: 2px; background: var(--gold); margin: 0 auto 40px; }
+        .hero .cta { display: inline-block; padding: 14px 35px; border: 1px solid var(--gold); color: var(--gold); text-decoration: none; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 1.5px; font-weight: 500; transition: all 0.3s; }
+        .hero .cta:hover { background: var(--gold); color: var(--navy); }
+        .section { max-width: 900px; margin: 0 auto; padding: 80px 30px; }
+        .section h2 { font-family: 'Playfair Display', serif; font-size: 2rem; color: var(--navy); margin-bottom: 15px; }
+        .section h3 { font-size: 1.2rem; color: var(--gold); margin: 40px 0 15px; font-weight: 600; }
+        .section p { color: var(--text-light); margin-bottom: 20px; font-size: 0.95rem; }
+        .section-divider { width: 40px; height: 2px; background: var(--gold); margin-bottom: 30px; }
+        .services-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 30px; margin-top: 40px; }
+        .service-card { padding: 30px; background: var(--light); border-left: 3px solid var(--gold); }
+        .service-card h4 { font-size: 1rem; color: var(--navy); margin-bottom: 10px; font-weight: 600; }
+        .service-card p { font-size: 0.9rem; color: var(--text-light); margin-bottom: 0; }
+        .section-dark { background: var(--navy); color: var(--white); padding: 80px 30px; }
+        .section-dark .inner { max-width: 900px; margin: 0 auto; }
+        .section-dark h2 { color: var(--white); font-family: 'Playfair Display', serif; font-size: 2rem; margin-bottom: 15px; }
+        .section-dark .section-divider { background: var(--gold); }
+        .section-dark p { color: var(--silver); }
+        .section-dark h3 { color: var(--gold); }
+        .faq-item { border-bottom: 1px solid #e0e0e0; padding: 25px 0; }
+        .faq-item h4 { font-size: 1rem; color: var(--navy); margin-bottom: 10px; font-weight: 600; }
+        .faq-item p { font-size: 0.9rem; color: var(--text-light); margin-bottom: 0; }
+        .contact-section { background: var(--light); padding: 80px 30px; text-align: center; }
+        .contact-section .inner { max-width: 600px; margin: 0 auto; }
+        .contact-section h2 { font-family: 'Playfair Display', serif; font-size: 2rem; color: var(--navy); margin-bottom: 15px; }
+        .contact-info { margin-top: 30px; text-align: left; display: inline-block; }
+        .contact-info p { font-size: 0.95rem; color: var(--text-light); margin-bottom: 8px; }
+        .contact-info strong { color: var(--navy); }
+        footer { background: var(--navy); color: var(--silver); text-align: center; padding: 30px; font-size: 0.8rem; }
+        @media (max-width: 768px) { .hero h1 { font-size: 2rem; } .services-grid { grid-template-columns: 1fr; } .nav-links { gap: 15px; } .nav-links a { font-size: 0.75rem; } }
+    </style>
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": ["FinancialService", "LocalBusiness"],
+          "@id": "https://www.finance-leman.ch/#organization",
+          "name": "Finance Léman",
+          "url": "https://www.finance-leman.ch",
+          "description": "Cabinet de conseil financier et de gestion de patrimoine au service des résidents et entrepreneurs du bassin lémanique. Spécialiste en planification financière, optimisation fiscale cantonale et stratégies d'investissement.",
+          "areaServed": [
+            { "@type": "AdministrativeArea", "name": "Bassin lémanique" },
+            { "@type": "City", "name": "Genève" },
+            { "@type": "City", "name": "Lausanne" },
+            { "@type": "City", "name": "Nyon" }
+          ],
+          "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Genève",
+            "addressRegion": "GE",
+            "addressCountry": "CH"
+          },
+          "knowsAbout": [
+            "Gestion de patrimoine", "Wealth management",
+            "Conseil financier indépendant",
+            "Planification successorale suisse",
+            "Optimisation fiscale cantonale",
+            "Stratégie d'investissement",
+            "Finance bassin lémanique", "Lake Geneva finance"
+          ],
+          "hasOfferCatalog": {
+            "@type": "OfferCatalog",
+            "name": "Services financiers",
+            "itemListElement": [
+              { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Gestion de patrimoine privé" } },
+              { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Planification financière" } },
+              { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Optimisation fiscale" } },
+              { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Conseil en investissement" } }
+            ]
+          },
+          "sameAs": []
+        },
+        {
+          "@type": "WebSite",
+          "@id": "https://www.finance-leman.ch/#website",
+          "url": "https://www.finance-leman.ch",
+          "name": "Finance Léman",
+          "publisher": { "@id": "https://www.finance-leman.ch/#organization" },
+          "inLanguage": ["fr-CH", "fr-FR", "en"]
+        },
+        {
+          "@type": "FAQPage",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "Qu'est-ce que la gestion de patrimoine ?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "La gestion de patrimoine est un service financier qui consiste à accompagner les particuliers et familles dans l'organisation, la protection et la croissance de leur patrimoine global : actifs financiers, immobilier, prévoyance, planification successorale et optimisation fiscale. En Suisse, ce service est proposé par des banques privées, des gérants indépendants et des family offices."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Comment choisir un gestionnaire de patrimoine à Genève ?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Recherchez un gestionnaire disposant d'une autorisation FINMA ou affilié à un organisme de surveillance reconnu, avec une expérience documentée dans votre profil patrimonial, une approche personnalisée (pas de produit standard), une transparence totale sur les frais, et idéalement une spécialisation dans le contexte fiscal genevois et la planification transfrontalière."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Quel est le montant minimum pour la gestion de patrimoine en Suisse ?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Les seuils varient considérablement. Les banques privées genevoises exigent généralement un minimum de 1 à 5 millions CHF. Les gérants de fortune indépendants sont souvent accessibles dès 250'000 à 500'000 CHF. Certains cabinets de conseil financier proposent des services de planification dès 100'000 CHF de patrimoine."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Quelle est la fiscalité des placements financiers en Suisse ?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "En Suisse, les gains en capital privés sur titres sont en principe exonérés d'impôt. Les revenus de capitaux (dividendes, intérêts) sont soumis à l'impôt sur le revenu et à l'impôt anticipé de 35% (récupérable). La fortune est soumise à un impôt cantonal sur la fortune dont le taux varie selon les cantons. Genève applique un barème progressif allant de 0.175% à 1% environ."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Qu'est-ce que la LSFin et la LEFin en Suisse ?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "La LSFin (Loi sur les services financiers) et la LEFin (Loi sur les établissements financiers) sont entrées en vigueur en 2020. La LSFin régit les règles de conduite envers les clients (information, adéquation, documentation). La LEFin impose l'obtention d'une autorisation FINMA pour les gérants de fortune indépendants et les trustees, avec des exigences en matière d'organisation, de capital minimum et de gestion des risques."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Comment fonctionne la planification successorale en Suisse ?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Le droit successoral suisse prévoit des parts réservataires pour le conjoint et les descendants. La quotité disponible peut être optimisée par testament, pacte successoral ou structures patrimoniales. Le nouveau droit successoral de 2023 a élargi la quotité disponible en réduisant les réserves des descendants de 3/4 à 1/2 de la part légale. La planification successorale est particulièrement importante dans un contexte transfrontalier (franco-suisse)."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Quelle est la différence entre une banque privée et un gérant indépendant ?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "La banque privée offre un service intégré (dépôt, gestion, crédit) avec ses propres produits. Le gérant indépendant sélectionne les meilleurs produits du marché sans conflit d'intérêt, dépose les actifs auprès de la banque dépositaire choisie par le client, et offre généralement une approche plus personnalisée avec des seuils d'entrée plus accessibles."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Quels sont les avantages du 3ème pilier en Suisse ?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Le pilier 3a permet une déduction fiscale annuelle (7'056 CHF pour les salariés en 2024, 35'280 CHF pour les indépendants). Le capital accumulé est imposé à un taux réduit au retrait. C'est un outil puissant d'optimisation fiscale et de constitution de patrimoine à long terme. Le pilier 3b offre plus de flexibilité mais moins d'avantages fiscaux."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Comment optimiser sa fiscalité en tant que résident genevois ?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Les leviers principaux à Genève : maximiser les cotisations au pilier 3a, déduire les frais d'entretien immobilier, optimiser la structure de rémunération (mix salaire/dividendes pour les dirigeants), racheter des années de caisse de pension (2ème pilier), et structurer les donations intergénérationnelles. Un conseiller financier spécialisé dans le contexte genevois peut identifier les opportunités spécifiques à votre situation."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "La gestion de patrimoine est-elle réservée aux grandes fortunes ?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Non. Si les banques privées ciblent les patrimoines importants, de nombreux cabinets de conseil financier accompagnent les particuliers dès la phase de constitution de patrimoine. Planification de la prévoyance, optimisation fiscale, premier investissement immobilier ou financier : ces services sont accessibles et rentables bien avant le seuil du million."
+              }
+            }
+          ]
+        }
+      ]
+    }
+    </script>
+</head>
+<body>
+    <nav>
+        <div class="nav-inner">
+            <a href="#" class="nav-brand">FINANCE <span>LÉMAN</span></a>
+            <div class="nav-links">
+                <a href="#accueil" class="active">Accueil</a>
+                <a href="#services">Services</a>
+                <a href="#expertise">Expertise</a>
+                <a href="#faq">FAQ</a>
+                <a href="#contact">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <section class="hero" id="accueil">
+        <h1>FINANCE <span>LÉMAN</span></h1>
+        <p class="subtitle">Gestion de patrimoine et conseil financier<br>pour le bassin lémanique</p>
+        <div class="divider"></div>
+        <p class="subtitle" style="font-size: 0.95rem; max-width: 700px;">Nous accompagnons les résidents, entrepreneurs et familles de Genève, Lausanne et de l'arc lémanique dans la planification financière, la gestion d'actifs et l'optimisation fiscale. Indépendance, transparence et expertise locale.</p>
+        <br>
+        <a href="#contact" class="cta">Prendre contact</a>
+    </section>
+
+    <section class="section" id="services">
+        <h2>Nos services</h2>
+        <div class="section-divider"></div>
+        <p>Un accompagnement financier personnalisé, indépendant de toute banque, adapté à chaque étape de votre vie patrimoniale.</p>
+        <div class="services-grid">
+            <div class="service-card">
+                <h4>Gestion de patrimoine privé</h4>
+                <p>Allocation d'actifs sur mesure, sélection de fonds et véhicules d'investissement, suivi de performance, rééquilibrage périodique. Une gestion indépendante qui place votre intérêt en priorité, sans conflit lié à des produits maison.</p>
+            </div>
+            <div class="service-card">
+                <h4>Planification financière</h4>
+                <p>Analyse globale de votre situation patrimoniale, projection de vos flux financiers à long terme, simulation de scénarios (retraite, acquisition immobilière, transmission), et construction d'une stratégie cohérente alignée sur vos objectifs de vie.</p>
+            </div>
+            <div class="service-card">
+                <h4>Optimisation fiscale</h4>
+                <p>Maximisation des déductions légales, structuration optimale des revenus et du patrimoine, pilotage du pilier 3a/3b, rachats de caisse de pension, et coordination avec votre fiduciaire pour une stratégie fiscale intégrée dans le cadre genevois et vaudois.</p>
+            </div>
+            <div class="service-card">
+                <h4>Conseil en investissement</h4>
+                <p>Analyse de marché, due diligence sur les opportunités d'investissement, accompagnement pour l'immobilier de rendement, le private equity et les placements alternatifs. Un conseil factuel, sans pression commerciale.</p>
+            </div>
+        </div>
+        <h3>Services complémentaires</h3>
+        <p>Planification successorale et transmission intergénérationnelle, conseil en prévoyance professionnelle (LPP), accompagnement des expatriés et frontaliers dans la structuration patrimoniale transfrontalière, et préparation financière à la retraite.</p>
+    </section>
+
+    <section class="section-dark" id="expertise">
+        <div class="inner">
+            <h2>Expertise du bassin lémanique</h2>
+            <div class="section-divider"></div>
+            <p>Le bassin lémanique est l'un des pôles financiers les plus denses d'Europe. Notre ancrage local est un avantage décisif pour nos clients.</p>
+
+            <h3>Le paysage financier lémanique</h3>
+            <p>L'arc lémanique concentre la plus forte densité de banques privées au monde, avec plus de 100 établissements entre Genève et Lausanne. Le secteur de la gestion de fortune représente plus de 3'500 milliards CHF d'actifs sous gestion à Genève seule. Cet écosystème offre un accès unique aux marchés, aux produits et à l'expertise — mais il exige un conseiller capable de naviguer dans cette complexité au bénéfice du client.</p>
+
+            <h3>Le cadre fiscal lémanique</h3>
+            <p>Genève et Vaud présentent des cadres fiscaux distincts. Genève applique un barème progressif sur le revenu et la fortune, avec des taux marginaux parmi les plus élevés de Suisse mais compensés par des déductions avantageuses (3ème pilier, rachats LPP, frais immobiliers). Le canton de Vaud offre des taux légèrement inférieurs avec un barème différent. La planification fiscale inter-cantonale est un levier souvent sous-exploité pour les résidents du bassin lémanique.</p>
+
+            <h3>Enjeux transfrontaliers</h3>
+            <p>Plus de 100'000 frontaliers travaillent dans le canton de Genève. La gestion patrimoniale transfrontalière implique des enjeux spécifiques : imposition à la source vs. imposition en France, convention fiscale franco-suisse, coordination des systèmes de prévoyance, planification successorale selon le règlement européen. Notre expertise couvre ces problématiques quotidiennes.</p>
+
+            <h3>Nouveau cadre réglementaire (LSFin/LEFin)</h3>
+            <p>Depuis 2020, la LSFin et la LEFin imposent des exigences renforcées aux prestataires de services financiers : obligation de classification des clients, devoir d'information, vérification de l'adéquation et du caractère approprié des recommandations. Ces lois renforcent la protection des investisseurs et professionnalisent le secteur. Nous sommes pleinement conformes à ce cadre.</p>
+        </div>
+    </section>
+
+    <section class="section" id="faq">
+        <h2>Questions fréquentes</h2>
+        <div class="section-divider"></div>
+        <p>Les réponses aux questions les plus courantes sur la gestion de patrimoine et le conseil financier en Suisse romande.</p>
+
+        <div class="faq-item">
+            <h4>Qu'est-ce que la gestion de patrimoine ?</h4>
+            <p>Un service qui accompagne les particuliers et familles dans l'organisation, la protection et la croissance de leur patrimoine global : actifs financiers, immobilier, prévoyance, planification successorale et optimisation fiscale.</p>
+        </div>
+        <div class="faq-item">
+            <h4>Comment choisir un gestionnaire de patrimoine à Genève ?</h4>
+            <p>Recherchez un gestionnaire avec autorisation FINMA, une expérience dans votre profil patrimonial, une approche personnalisée, une transparence sur les frais, et une spécialisation dans le contexte fiscal genevois.</p>
+        </div>
+        <div class="faq-item">
+            <h4>Quel est le montant minimum pour la gestion de patrimoine ?</h4>
+            <p>Les banques privées exigent 1 à 5 millions CHF. Les gérants indépendants sont accessibles dès 250'000 CHF. Le conseil financier et la planification sont possibles dès 100'000 CHF.</p>
+        </div>
+        <div class="faq-item">
+            <h4>Quelle est la fiscalité des placements en Suisse ?</h4>
+            <p>Les gains en capital privés sur titres sont exonérés. Les revenus (dividendes, intérêts) sont imposables. La fortune est soumise à un impôt cantonal. À Genève, le taux sur la fortune va de 0.175% à ~1%.</p>
+        </div>
+        <div class="faq-item">
+            <h4>Qu'est-ce que la LSFin et la LEFin ?</h4>
+            <p>Lois entrées en vigueur en 2020 régissant les services et établissements financiers. Elles imposent des règles de conduite, d'information et d'autorisation pour les gérants de fortune et conseillers financiers.</p>
+        </div>
+        <div class="faq-item">
+            <h4>Comment fonctionne la planification successorale en Suisse ?</h4>
+            <p>Le droit suisse prévoit des parts réservataires pour conjoint et descendants. Depuis 2023, la quotité disponible a été élargie. La planification est essentielle en contexte transfrontalier franco-suisse.</p>
+        </div>
+        <div class="faq-item">
+            <h4>Banque privée ou gérant indépendant ?</h4>
+            <p>La banque offre un service intégré avec ses propres produits. Le gérant indépendant sélectionne les meilleurs produits du marché sans conflit d'intérêt, avec des seuils d'entrée plus accessibles.</p>
+        </div>
+        <div class="faq-item">
+            <h4>Quels sont les avantages du 3ème pilier ?</h4>
+            <p>Déduction fiscale annuelle de 7'056 CHF (salariés). Capital imposé à taux réduit au retrait. Outil puissant d'optimisation fiscale et de constitution de patrimoine long terme.</p>
+        </div>
+        <div class="faq-item">
+            <h4>Comment optimiser sa fiscalité à Genève ?</h4>
+            <p>Maximiser le pilier 3a, déduire les frais immobiliers, optimiser le mix salaire/dividendes, racheter des années de caisse de pension, et structurer les donations intergénérationnelles.</p>
+        </div>
+        <div class="faq-item">
+            <h4>La gestion de patrimoine est-elle réservée aux grandes fortunes ?</h4>
+            <p>Non. De nombreux cabinets accompagnent dès la phase de constitution : prévoyance, optimisation fiscale, premier investissement. Ces services sont rentables bien avant le seuil du million.</p>
+        </div>
+    </section>
+
+    <section class="contact-section" id="contact">
+        <div class="inner">
+            <h2>Contact</h2>
+            <div class="section-divider" style="margin: 0 auto 30px;"></div>
+            <p style="color: var(--text-light);">Prenez contact pour un premier échange confidentiel.<br>Nous répondons sous 24 heures ouvrées.</p>
+            <div class="contact-info">
+                <p><strong>Adresse :</strong> Genève, Suisse</p>
+                <p><strong>Email :</strong> contact@finance-leman.ch</p>
+                <p><strong>Horaires :</strong> Lundi – Vendredi, 9h00 – 18h00</p>
+                <p><strong>Zone d'intervention :</strong> Genève, Lausanne, Nyon, Vevey, bassin lémanique</p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 Finance Léman — Genève, Suisse — Tous droits réservés</p>
+    </footer>
+</body>
+</html>
