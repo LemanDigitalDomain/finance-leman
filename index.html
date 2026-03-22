@@ -76,8 +76,28 @@
             "@type": "PostalAddress",
             "addressLocality": "Genève",
             "addressRegion": "GE",
+            "postalCode": "1200",
             "addressCountry": "CH"
           },
+          "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": "46.2044",
+            "longitude": "6.1432"
+          },
+          "telephone": "+41-22-000-00-00",
+          "email": "contact@finance-leman.ch",
+          "openingHoursSpecification": [
+            {
+              "@type": "OpeningHoursSpecification",
+              "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+              "opens": "09:00",
+              "closes": "18:00"
+            }
+          ],
+          "priceRange": "$$$",
+          "currenciesAccepted": "CHF, EUR, USD",
+          "paymentAccepted": "Virement bancaire",
+          "knowsLanguage": ["fr", "en", "de"],
           "knowsAbout": [
             "Gestion de patrimoine", "Wealth management",
             "Conseil financier indépendant",
@@ -96,6 +116,32 @@
               { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Conseil en investissement" } }
             ]
           },
+          "potentialAction": [
+            {
+              "@type": "ReserveAction",
+              "name": "Prendre rendez-vous",
+              "target": {
+                "@type": "EntryPoint",
+                "urlTemplate": "https://www.finance-leman.ch/#contact",
+                "actionPlatform": [
+                  "http://schema.org/DesktopWebPlatform",
+                  "http://schema.org/MobileWebPlatform"
+                ]
+              },
+              "result": {
+                "@type": "Reservation",
+                "name": "Consultation patrimoniale"
+              }
+            },
+            {
+              "@type": "CommunicateAction",
+              "name": "Contacter par email",
+              "target": {
+                "@type": "EntryPoint",
+                "urlTemplate": "mailto:contact@finance-leman.ch"
+              }
+            }
+          ],
           "sameAs": []
         },
         {
@@ -318,15 +364,11 @@
             <p style="color: var(--text-light);">Prenez contact pour un premier échange confidentiel.<br>Nous répondons sous 24 heures ouvrées.</p>
             <div class="contact-info">
                 <p><strong>Adresse :</strong> Genève, Suisse</p>
-                <p><strong>Email :</strong> contact@finance-leman.ch</p>
+                <p><strong>Email :</strong> <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="afccc0c1dbceccdbefc9c6c1cec1ccca82c3cac2cec181ccc7">[email&#160;protected]</a></p>
                 <p><strong>Horaires :</strong> Lundi – Vendredi, 9h00 – 18h00</p>
                 <p><strong>Zone d'intervention :</strong> Genève, Lausanne, Nyon, Vevey, bassin lémanique</p>
             </div>
         </div>
     </section>
 
-    <footer>
-        <p>&copy; 2026 Finance Léman — Genève, Suisse — Tous droits réservés</p>
-    </footer>
-</body>
-</html>
+    <
