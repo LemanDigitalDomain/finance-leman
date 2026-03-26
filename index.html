@@ -5,53 +5,66 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="google-site-verification" content="SVS0QQv2SznVV0uGwPQVXDh8is3louu2BX2jkcIWfwY" />
   <title>Finance Léman — Terminal Transfrontalier du Bassin Lémanique</title>
-  <meta name="description" content="Ressources complètes pour travailleurs frontaliers franco-suisses : fiscalité, impôt à la source, LAMal vs CMU, télétravail, prévoyance, change, transport. Liens officiels ge.ch, fedlex.">
+  <meta name="description" content="Ressources complètes pour travailleurs frontaliers franco-suisses : fiscalité, impôt à la source, LAMal vs CMU, télétravail, prévoyance, change, transport.">
   <meta name="robots" content="index, follow">
   <link rel="canonical" href="https://finance-leman.ch">
   <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@graph": [
-      {
-        "@type": "WebPage",
-        "@id": "https://finance-leman.ch/#page",
-        "name": "Terminal Transfrontalier — Finance Léman",
-        "description": "Centre de ressources pour travailleurs frontaliers franco-suisses du bassin lémanique.",
-        "inLanguage": ["fr", "en"],
-        "isPartOf": { "@id": "https://finance-leman.ch/#website" }
-      },
-      {
-        "@type": ["FinancialService", "LocalBusiness"],
-        "@id": "https://finance-leman.ch/#business",
-        "name": "Finance Léman",
-        "description": "Terminal de ressources financières et administratives pour travailleurs frontaliers du bassin lémanique.",
-        "url": "https://finance-leman.ch",
-        "areaServed": [
-          { "@type": "AdministrativeArea", "name": "Bassin lémanique" },
-          { "@type": "City", "name": "Genève" },
-          { "@type": "City", "name": "Annemasse" }
-        ],
-        "knowsLanguage": ["fr", "en"],
-        "knowsAbout": ["Frontalier franco-suisse", "Impôt à la source Genève", "LAMal frontalier", "CMU frontalier", "Télétravail frontalier 40%", "Permis G frontalier", "Quasi-résident Genève"]
-      },
-      {
-        "@type": "FAQPage",
-        "mainEntity": [
-          {"@type": "Question", "name": "Comment fonctionne l'impôt à la source pour les frontaliers à Genève ?", "acceptedAnswer": {"@type": "Answer", "text": "Les frontaliers travaillant à Genève sont imposés à la source en Suisse selon leur situation familiale (barèmes A, B, C, H). Genève rétrocède 3.5% à la France."}},
-          {"@type": "Question", "name": "LAMal ou CMU : quel choix pour un frontalier ?", "acceptedAnswer": {"@type": "Answer", "text": "Le frontalier a 3 mois pour choisir. Ce choix est irrévocable. LAMal = soins suisses, CMU = soins français."}},
-          {"@type": "Question", "name": "Combien de télétravail est autorisé en 2026 ?", "acceptedAnswer": {"@type": "Answer", "text": "40% max sans impact fiscal, 49.9% pour les assurances sociales."}}
-        ]
-      }
-    ]
-  }
+  {"@context":"https://schema.org","@graph":[{"@type":"WebPage","@id":"https://finance-leman.ch/#page","name":"Terminal Transfrontalier — Finance Léman","description":"Centre de ressources pour travailleurs frontaliers franco-suisses.","inLanguage":["fr","en"]},{"@type":["FinancialService","LocalBusiness"],"@id":"https://finance-leman.ch/#business","name":"Finance Léman","description":"Terminal de ressources pour travailleurs frontaliers du bassin lémanique.","url":"https://finance-leman.ch","areaServed":[{"@type":"AdministrativeArea","name":"Bassin lémanique"}]}]}
   </script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:wght@400;600;700&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
   <style>
-    :root{--ink:#1a1a2e;--paper:#f7f7f5;--cream:#edecea;--bleu:#16213e;--bleu-mid:#1a3a5c;--bleu-light:#2d6a9f;--vert:#1b7a4e;--vert-light:#28a068;--rouge-doux:#c0392b;--or:#d4a528;--gris:#5a5a6e;--gris-light:#8e8e9e;--border:#d8d6d0;--card:#ffffff;--shadow-hover:0 8px 32px rgba(0,0,0,0.1);--radius:8px;--max-w:1120px;--ease:0.3s cubic-bezier(0.4,0,0.2,1)}
+    :root{--ink:#1a1a2e;--paper:#f7f7f5;--cream:#edecea;--bleu:#16213e;--bleu-mid:#1a3a5c;--bleu-light:#2d6a9f;--vert:#1b7a4e;--vert-light:#28a068;--rouge-doux:#c0392b;--or:#d4a528;--gris:#5a5a6e;--gris-light:#8e8e9e;--border:#d8d6d0;--card:#ffffff;--shadow-hover:0 8px 32px rgba(0,0,0,0.1);--radius:8px;--max-w:1120px;--ease:0.3s cubic-bezier(0.4,0,0.2,1);--myrtille:#7C3AED;--myrtille-dark:#6D28D9;--myrtille-light:#8B5CF6}
     *{margin:0;padding:0;box-sizing:border-box}
     body{font-family:'DM Sans',sans-serif;background:var(--paper);color:var(--ink);line-height:1.65;font-size:16px;-webkit-font-smoothing:antialiased}
+
+    /* ══════════════════════════════════════════════════════════════════
+       GLASS MYRTILLE BUTTON - Style Apple iOS
+    ══════════════════════════════════════════════════════════════════ */
+    .glass-myrtille-cta{display:inline-flex;align-items:center;justify-content:center;gap:10px;padding:16px 32px;font-family:inherit;font-size:0.95rem;font-weight:700;color:white;background:rgba(124,58,237,0.25);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);border:1px solid rgba(124,58,237,0.4);border-radius:14px;cursor:pointer;transition:all 0.3s ease;box-shadow:0 0 20px rgba(124,58,237,0.15),0 8px 32px rgba(0,0,0,0.1);text-decoration:none;position:relative;overflow:hidden}
+    .glass-myrtille-cta::before{content:'';position:absolute;top:0;left:0;right:0;height:50%;background:linear-gradient(180deg,rgba(255,255,255,0.15) 0%,transparent 100%);pointer-events:none}
+    .glass-myrtille-cta:hover{background:rgba(124,58,237,0.35);border-color:rgba(124,58,237,0.6);box-shadow:0 0 30px rgba(124,58,237,0.25),0 12px 40px rgba(0,0,0,0.15);transform:translateY(-2px)}
+    .glass-myrtille-cta .berry{font-size:1.2rem}
+    .glass-myrtille-cta .pulse-dot{width:8px;height:8px;background:#4ade80;border-radius:50%;animation:pulse 2s infinite;margin-left:4px}
+    @keyframes pulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:0.5;transform:scale(1.3)}}
+    .glass-myrtille-cta-dark{background:rgba(124,58,237,0.35);border-color:rgba(124,58,237,0.5)}
+    .glass-myrtille-cta-dark:hover{background:rgba(124,58,237,0.45);border-color:rgba(124,58,237,0.7)}
+
+    /* ══════════════════════════════════════════════════════════════════
+       MYRTILLE CHAT MODAL
+    ══════════════════════════════════════════════════════════════════ */
+    .myrtille-overlay{display:none;position:fixed;top:0;left:0;right:0;bottom:0;background:rgba(0,0,0,0.5);z-index:1000;backdrop-filter:blur(4px)}
+    .myrtille-overlay.open{display:flex;align-items:center;justify-content:center}
+    .myrtille-chat{background:white;width:90%;max-width:480px;height:80vh;max-height:620px;border-radius:16px;display:flex;flex-direction:column;box-shadow:0 25px 50px rgba(0,0,0,0.25);overflow:hidden;animation:slideUp 0.3s ease}
+    @keyframes slideUp{from{opacity:0;transform:translateY(30px)}to{opacity:1;transform:translateY(0)}}
+    .myrtille-header{background:linear-gradient(135deg,var(--myrtille) 0%,var(--myrtille-dark) 100%);color:white;padding:16px 20px;display:flex;align-items:center;gap:12px}
+    .myrtille-header .avatar{width:44px;height:44px;background:rgba(255,255,255,0.2);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:1.5rem}
+    .myrtille-header .info h3{font-size:1.05rem;font-weight:600;margin-bottom:2px}
+    .myrtille-header .info span{font-size:0.75rem;opacity:0.8}
+    .myrtille-header .close{margin-left:auto;background:rgba(255,255,255,0.2);border:none;color:white;width:34px;height:34px;border-radius:50%;cursor:pointer;font-size:1.3rem;display:flex;align-items:center;justify-content:center;transition:background 0.2s}
+    .myrtille-header .close:hover{background:rgba(255,255,255,0.3)}
+    .myrtille-messages{flex:1;overflow-y:auto;padding:20px;display:flex;flex-direction:column;gap:12px;background:#f9fafb}
+    .msg{max-width:85%;padding:12px 16px;border-radius:16px;font-size:0.9rem;line-height:1.5}
+    .msg.assistant{background:white;border:1px solid #e5e7eb;align-self:flex-start;border-bottom-left-radius:4px}
+    .msg.user{background:var(--myrtille);color:white;align-self:flex-end;border-bottom-right-radius:4px}
+    .msg.typing{background:white;border:1px solid #e5e7eb;align-self:flex-start;padding:16px}
+    .msg.typing .dots{display:flex;gap:5px}
+    .msg.typing .dot{width:8px;height:8px;background:var(--myrtille);border-radius:50%;animation:typing 1.4s infinite}
+    .msg.typing .dot:nth-child(2){animation-delay:0.2s}
+    .msg.typing .dot:nth-child(3){animation-delay:0.4s}
+    @keyframes typing{0%,100%{opacity:0.3;transform:translateY(0)}50%{opacity:1;transform:translateY(-4px)}}
+    .myrtille-input{padding:16px;border-top:1px solid #e5e7eb;display:flex;gap:10px;background:white}
+    .myrtille-input input{flex:1;padding:12px 16px;border:1px solid #e5e7eb;border-radius:24px;font-size:0.9rem;outline:none;transition:border-color 0.2s;font-family:inherit}
+    .myrtille-input input:focus{border-color:var(--myrtille)}
+    .myrtille-input button{background:var(--myrtille);color:white;border:none;width:46px;height:46px;border-radius:50%;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:background 0.2s}
+    .myrtille-input button:hover{background:var(--myrtille-dark)}
+    .myrtille-input button:disabled{background:#d1d5db;cursor:not-allowed}
+    .myrtille-input button svg{width:20px;height:20px}
+    .myrtille-footer{padding:10px 16px;text-align:center;font-size:0.72rem;color:#9ca3af;background:white;border-top:1px solid #f3f4f6}
+    .myrtille-footer a{color:var(--myrtille);text-decoration:none;font-weight:500}
+
+    /* ── LAYOUT ── */
     .header{background:var(--bleu);position:sticky;top:0;z-index:100;box-shadow:0 2px 12px rgba(0,0,0,0.2)}
     .header-inner{max-width:var(--max-w);margin:0 auto;padding:14px 24px;display:flex;align-items:center;justify-content:space-between}
     .logo{font-family:'Source Serif 4',serif;font-size:1.3rem;font-weight:700;color:#fff;text-decoration:none}
@@ -69,8 +82,6 @@
     .hero-stat{text-align:center}
     .hero-stat .num{font-family:'Source Serif 4',serif;font-size:1.6rem;font-weight:700;color:var(--or)}
     .hero-stat .label{font-size:0.72rem;color:rgba(255,255,255,0.5);margin-top:2px;text-transform:uppercase}
-    .hero-cta{display:inline-flex;align-items:center;gap:8px;background:var(--vert);color:#fff;padding:13px 30px;border-radius:var(--radius);font-weight:700;font-size:0.92rem;border:none;cursor:pointer;transition:all var(--ease)}
-    .hero-cta:hover{background:var(--vert-light);transform:translateY(-2px)}
     .trust{background:var(--cream);border-bottom:1px solid var(--border);padding:14px 24px;text-align:center}
     .trust p{font-size:0.78rem;color:var(--gris);max-width:var(--max-w);margin:0 auto}
     .trust strong{color:var(--bleu-mid)}
@@ -86,7 +97,6 @@
     .tag-sante{background:#e8f5ee;color:var(--vert)}
     .tag-travail{background:#fff5e0;color:#a07000}
     .tag-pratique{background:#fce8e8;color:var(--rouge-doux)}
-    .tag-transport{background:#e8eef5;color:#2a5a8c}
     .tag-prevoyance{background:#f0e8f5;color:#6a3a8c}
     .card h3{font-family:'Source Serif 4',serif;font-size:1.1rem;color:var(--bleu);margin-bottom:8px}
     .card>p{font-size:0.88rem;color:var(--gris);line-height:1.55;margin-bottom:14px}
@@ -96,7 +106,6 @@
     .link-list a{color:var(--bleu-light);text-decoration:none;font-weight:500;transition:color var(--ease)}
     .link-list a:hover{color:var(--rouge-doux)}
     .link-list .src{color:var(--gris-light);font-size:0.72rem}
-    .link-list .chemin{display:block;color:var(--gris-light);font-size:0.72rem;font-style:italic}
     .card-cta{display:inline-flex;align-items:center;gap:5px;background:var(--bleu);color:#fff;padding:8px 16px;border-radius:5px;font-size:0.78rem;font-weight:600;border:none;cursor:pointer;transition:all var(--ease)}
     .card-cta:hover{background:var(--bleu-light)}
     .table-wrap{overflow-x:auto;margin:16px 0}
@@ -109,16 +118,6 @@
     .encart strong{color:var(--bleu)}
     .encart-vert{background:#e8f5ee;border-left-color:var(--vert)}
     .encart-rouge{background:#fce8e8;border-left-color:var(--rouge-doux)}
-    .checklist{list-style:none;padding:0;margin:16px 0;counter-reset:step}
-    .checklist li{padding:10px 0 10px 40px;border-bottom:1px solid #f0ede8;font-size:0.88rem;position:relative}
-    .checklist li::before{counter-increment:step;content:counter(step);position:absolute;left:0;top:10px;width:26px;height:26px;background:var(--bleu);color:#fff;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:0.72rem;font-weight:700}
-    .checklist li:last-child{border:none}
-    .timeline{position:relative;padding-left:28px;margin:20px 0}
-    .timeline::before{content:'';position:absolute;left:8px;top:0;bottom:0;width:2px;background:var(--border)}
-    .tl-item{position:relative;padding:0 0 20px}
-    .tl-item::before{content:'';position:absolute;left:-24px;top:4px;width:12px;height:12px;background:var(--bleu);border-radius:50%;border:2px solid var(--paper)}
-    .tl-date{font-size:0.75rem;font-weight:700;color:var(--vert);text-transform:uppercase}
-    .tl-text{font-size:0.86rem;color:var(--gris);margin-top:2px}
     .faq-section{margin-bottom:56px}
     .faq-item{border-bottom:1px solid var(--border);padding:20px 0}
     .faq-item:first-child{border-top:1px solid var(--border)}
@@ -128,11 +127,9 @@
     .faq-a{max-height:0;overflow:hidden;transition:max-height 0.4s ease;font-size:0.88rem;color:var(--gris);line-height:1.6}
     .faq-item.open .faq-a{max-height:600px;padding-top:12px}
     .faq-a a{color:var(--bleu-light);font-weight:500}
-    .diag{background:linear-gradient(140deg,var(--bleu) 0%,#0c1a30 100%);color:#fff;border-radius:var(--radius);padding:52px 36px;text-align:center;margin-bottom:56px;position:relative;overflow:hidden}
+    .diag{background:linear-gradient(140deg,var(--bleu) 0%,#0c1a30 100%);color:#fff;border-radius:var(--radius);padding:52px 36px;text-align:center;margin-bottom:56px}
     .diag h2{font-family:'Source Serif 4',serif;font-size:1.7rem;margin-bottom:12px}
     .diag p{color:rgba(255,255,255,0.65);max-width:520px;margin:0 auto 24px;font-size:0.92rem}
-    .diag-cta{display:inline-flex;align-items:center;gap:8px;background:var(--vert);color:#fff;padding:14px 32px;border-radius:var(--radius);font-weight:700;font-size:0.95rem;border:none;cursor:pointer;transition:all var(--ease)}
-    .diag-cta:hover{background:var(--vert-light);transform:translateY(-2px)}
     .diag-steps{display:flex;justify-content:center;gap:36px;margin-top:28px}
     .diag-step{text-align:center}
     .diag-step .sn{width:32px;height:32px;border-radius:50%;background:rgba(255,255,255,0.1);border:1px solid rgba(255,255,255,0.2);display:flex;align-items:center;justify-content:center;font-weight:700;font-size:0.8rem;margin:0 auto 6px}
@@ -140,10 +137,29 @@
     .footer{background:var(--ink);color:rgba(255,255,255,0.45);padding:36px 24px;text-align:center;font-size:0.78rem;line-height:1.7}
     .footer a{color:var(--or);text-decoration:none}
     .footer-brand{font-family:'Source Serif 4',serif;font-size:1rem;color:#fff;margin-bottom:8px}
-    @media(max-width:768px){.grid-2,.grid-3{grid-template-columns:1fr}.hero-stats{flex-direction:column;gap:12px}.diag-steps{flex-direction:column;gap:12px}.hero{padding:48px 20px 40px}.diag{padding:36px 20px}nav{display:none}}
+    @media(max-width:768px){.grid-2,.grid-3{grid-template-columns:1fr}.hero-stats{flex-direction:column;gap:12px}.diag-steps{flex-direction:column;gap:12px}.hero{padding:48px 20px 40px}.diag{padding:36px 20px}nav{display:none}.glass-myrtille-cta{padding:14px 24px;font-size:0.88rem}}
   </style>
 </head>
 <body>
+  <!-- ════ MYRTILLE CHAT OVERLAY ════ -->
+  <div class="myrtille-overlay" id="myrtilleOverlay" onclick="closeMyrtille(event)">
+    <div class="myrtille-chat" onclick="event.stopPropagation()">
+      <div class="myrtille-header">
+        <div class="avatar">🫐</div>
+        <div class="info"><h3>Myrtille</h3><span>Assistante transfrontalière</span></div>
+        <button class="close" onclick="closeMyrtille()">×</button>
+      </div>
+      <div class="myrtille-messages" id="myrtilleMessages">
+        <div class="msg assistant">Bonjour ! Je suis Myrtille, votre assistante pour toutes les questions des travailleurs frontaliers du bassin lémanique. 🫐<br><br>Fiscalité, LAMal/CMU, télétravail, prévoyance... Comment puis-je vous aider ?</div>
+      </div>
+      <div class="myrtille-input">
+        <input type="text" id="myrtilleInput" placeholder="Posez votre question..." onkeypress="handleKeyPress(event)">
+        <button onclick="sendMessage()" id="sendBtn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z"/></svg></button>
+      </div>
+      <div class="myrtille-footer">🫐 Myrtille by <a href="https://finance-leman.ch">LDA</a> — Propulsé par IA</div>
+    </div>
+  </div>
+
   <header class="header">
     <div class="header-inner">
       <a href="https://finance-leman.ch" class="logo">Finance <span>Léman</span></a>
@@ -151,322 +167,189 @@
         <a href="#fiscalite">Fiscalité</a>
         <a href="#assurance">Assurance</a>
         <a href="#teletravail">Télétravail</a>
-        <a href="#prevoyance">Prévoyance</a>
-        <a href="#pratique">Vie pratique</a>
         <a href="#faq">FAQ</a>
-        <a href="javascript:void(0)" onclick="openChat()">Diagnostic</a>
+        <a href="javascript:void(0)" onclick="openMyrtille()">Diagnostic</a>
       </nav>
     </div>
   </header>
   <section class="hero">
     <div class="hero-badge">Terminal transfrontalier</div>
     <h1>Le guichet complet du <em>frontalier lémanique</em></h1>
-    <p>Fiscalité, assurance maladie, prévoyance, télétravail, transport, change — toutes les ressources officielles au même endroit. Liens directs, données 2026.</p>
+    <p>Fiscalité, assurance maladie, prévoyance, télétravail, transport, change — toutes les ressources officielles au même endroit.</p>
     <div class="hero-stats">
       <div class="hero-stat"><div class="num">116'200</div><div class="label">Frontaliers à Genève</div></div>
       <div class="hero-stat"><div class="num">40%</div><div class="label">Seuil télétravail 2026</div></div>
       <div class="hero-stat"><div class="num">7'258</div><div class="label">CHF Pilier 3a 2026</div></div>
     </div>
-    <button class="hero-cta" onclick="openChat()">Diagnostic transfrontalier gratuit →</button>
+    <button class="glass-myrtille-cta" onclick="openMyrtille()">
+      <span class="berry">🫐</span>
+      Diagnostic transfrontalier gratuit
+      <span class="pulse-dot"></span>
+    </button>
   </section>
-  <div class="trust">
-    <p>Sources : <strong>ge.ch</strong> · <strong>Fedlex</strong> · <strong>estv.admin.ch</strong> · <strong>SEM</strong> · <strong>ameli.fr</strong> · <strong>impots.gouv.fr</strong> · <strong>OFAS</strong></p>
-  </div>
+  <div class="trust"><p>Sources : <strong>ge.ch</strong> · <strong>Fedlex</strong> · <strong>estv.admin.ch</strong> · <strong>SEM</strong> · <strong>ameli.fr</strong> · <strong>OFAS</strong></p></div>
   <main class="main">
-    <section id="fiscalite">
-      <h2 class="stitle">Fiscalité du frontalier</h2>
-      <p class="ssub">Impôt à la source, barèmes, DRIS, TOU, quasi-résident, convention 2026.</p>
-      <div class="grid-2">
-        <div class="card">
-          <span class="card-tag tag-fiscal">Impôt à la source</span>
-          <h3>Barèmes et prélèvement 2026</h3>
-          <p>Le frontalier travaillant à Genève est imposé à la source en Suisse. Le barème dépend de la situation familiale : A (célibataire), B (marié, conjoint sans revenu), C (marié, conjoint avec revenu), H (monoparental).</p>
-          <div class="table-wrap">
-            <table>
-              <tr><th>Barème</th><th>Situation</th><th>Application</th></tr>
-              <tr><td>A</td><td>Célibataire, divorcé, veuf</td><td>Avec ou sans enfant</td></tr>
-              <tr><td>B</td><td>Marié, conjoint SANS revenu</td><td>Taux favorable</td></tr>
-              <tr><td>C</td><td>Marié, conjoint AVEC revenu</td><td>Max 70'350 CHF</td></tr>
-              <tr><td>H</td><td>Monoparental</td><td>Avec enfant(s)</td></tr>
-            </table>
-          </div>
-          <div class="encart"><strong>Nouveauté 2026 :</strong> Frais kilométriques passent de 0.70 à 0.75 cts/km.</div>
-          <ul class="link-list">
-            <li><a href="https://www.ge.ch/document/baremes-2026-perception-impot-source" target="_blank" rel="noopener">Barèmes 2026 impôt à la source</a> <span class="src">ge.ch</span></li>
-            <li><a href="https://www.ge.ch/impot-source" target="_blank" rel="noopener">Portail impôt à la source — Genève</a> <span class="src">ge.ch</span></li>
-            <li><a href="https://www.estv.admin.ch/estv/fr/accueil/impot-federal-direct/impot-a-la-source.html" target="_blank" rel="noopener">Impôt à la source — AFC</a> <span class="src">estv.admin.ch</span></li>
-          </ul>
-          <button class="card-cta" onclick="openChat()">Quel barème pour moi ? →</button>
-        </div>
-        <div class="card">
-          <span class="card-tag tag-fiscal">DRIS · TOU · Quasi-résident</span>
-          <h3>Rectifier ou optimiser son imposition</h3>
-          <p>La DRIS corrige des erreurs et fait valoir certaines déductions. La TOU permet d'être imposé comme un résident si 90% des revenus mondiaux sont imposés en Suisse.</p>
-          <div class="table-wrap">
-            <table>
-              <tr><th>Procédure</th><th>Pour qui</th><th>Avantage</th><th>Délai</th></tr>
-              <tr><td><strong>DRIS</strong></td><td>Tous frontaliers</td><td>Déduire 3a, frais garde</td><td>31 mars N+1</td></tr>
-              <tr><td><strong>TOU</strong></td><td>90%+ revenus CH</td><td>Toutes déductions résident</td><td>31 mars N+1</td></tr>
-            </table>
-          </div>
-          <div class="encart-vert encart"><strong>Astuce :</strong> Un célibataire travaillant uniquement à Genève remplit quasi toujours la condition des 90%.</div>
-          <ul class="link-list">
-            <li><a href="https://www.ge.ch/impot-source" target="_blank" rel="noopener">Portail impôt à la source — démarches</a> <span class="src">ge.ch</span></li>
-            <li><a href="https://www.ge.ch/dossier/vos-impots" target="_blank" rel="noopener">Administration fiscale — Genève</a> <span class="src">ge.ch</span></li>
-          </ul>
-          <button class="card-cta" onclick="openChat()">DRIS ou TOU pour moi ? →</button>
-        </div>
-        <div class="card">
-          <span class="card-tag tag-fiscal">Convention 2026</span>
-          <h3>Avenant fiscal franco-suisse</h3>
-          <p>L'avenant pérennise le télétravail à 40%, instaure un échange automatique de données salariales (2027), et confirme les règles de rétrocession fiscale.</p>
-          <ul class="link-list">
-            <li><a href="https://www.fedlex.admin.ch/eli/cc/1967/1232_1280_1268/fr" target="_blank" rel="noopener">Convention fiscale franco-suisse</a> <span class="src">Fedlex</span></li>
-            <li><a href="https://www.ge.ch/imposition-du-teletravail-personnes-frontalieres/accords-applicables-au-teletravail" target="_blank" rel="noopener">Accords télétravail — frontaliers</a> <span class="src">ge.ch</span></li>
-            <li><a href="https://www.impots.gouv.fr" target="_blank" rel="noopener">impots.gouv.fr — formulaire 2047</a> <span class="src">impots.gouv.fr</span></li>
-          </ul>
-          <div class="encart-rouge encart"><strong>Attention :</strong> Dès 2027, échange automatique des données salariales.</div>
-          <button class="card-cta" onclick="openChat()">Vérifier mon impact →</button>
-        </div>
-        <div class="card">
-          <span class="card-tag tag-fiscal">Change CHF / EUR</span>
-          <h3>Optimiser son taux de change</h3>
-          <p>Le frontalier perd 1-2% par an sur le spread de change avec une banque classique.</p>
-          <div class="table-wrap">
-            <table>
-              <tr><th>Solution</th><th>Spread</th><th>Perte/an</th></tr>
-              <tr><td>Banque classique</td><td>1.5–2.5%</td><td>~1'440 CHF</td></tr>
-              <tr><td>Bureau de change</td><td>0.8–1.2%</td><td>~720 CHF</td></tr>
-              <tr class="highlight-cell"><td>Wise/Revolut</td><td>0.2–0.5%</td><td>~250 CHF</td></tr>
-            </table>
-          </div>
-          <div class="encart-vert encart"><strong>Économie :</strong> 700 à 1'400 CHF/an en passant aux fintechs.</div>
-          <button class="card-cta" onclick="openChat()">Calculer ma perte →</button>
-        </div>
-      </div>
-    </section>
-    <section id="assurance">
-      <h2 class="stitle">Assurance maladie</h2>
-      <p class="ssub">LAMal ou CMU ? Le choix le plus important du frontalier.</p>
-      <div class="grid-2">
-        <div class="card">
-          <span class="card-tag tag-sante">LAMal vs CMU</span>
-          <h3>Comparatif du droit d'option</h3>
-          <p>À l'embauche, le frontalier a 3 mois pour choisir. Ce choix est irrévocable.</p>
-          <div class="table-wrap">
-            <table>
-              <tr><th>Critère</th><th>LAMal</th><th>CMU</th></tr>
-              <tr><td>Coût mensuel</td><td>~450-550 CHF</td><td>~8% revenu fiscal</td></tr>
-              <tr><td>Soins Suisse</td><td>Complet</td><td>Urgences</td></tr>
-              <tr><td>Soins France</td><td>Carte européenne</td><td>Complet</td></tr>
-              <tr><td>Famille</td><td>Chaque membre cotise</td><td>Couverture familiale</td></tr>
-            </table>
-          </div>
-          <div class="encart-rouge encart"><strong>Délai critique :</strong> 3 mois pour choisir. Passé ce délai = LAMal automatique.</div>
-          <ul class="link-list">
-            <li><a href="https://www.ge.ch/choisir-mon-assurance-maladie" target="_blank" rel="noopener">Choisir son assurance maladie — Genève</a> <span class="src">ge.ch</span></li>
-            <li><a href="https://www.ameli.fr/assure/droits-demarches/europe-international/protection-sociale-etranger/travail-etranger" target="_blank" rel="noopener">Travailler à l'étranger — ameli.fr</a> <span class="src">ameli.fr</span></li>
-            <li><a href="https://www.fedlex.admin.ch/eli/cc/1995/1328_1328_1328/fr" target="_blank" rel="noopener">Loi LAMal</a> <span class="src">Fedlex</span></li>
-          </ul>
-          <button class="card-cta" onclick="openChat()">LAMal ou CMU pour moi ? →</button>
-        </div>
-        <div class="card">
-          <span class="card-tag tag-sante">Complémentaires</span>
-          <h3>Ce que la base ne couvre pas</h3>
-          <p>Dentaire, optique, chambre privée — les complémentaires sont souvent indispensables.</p>
-          <ul class="link-list">
-            <li><a href="https://www.priminfo.admin.ch/fr" target="_blank" rel="noopener">Comparateur primes LAMal (OFSP)</a> <span class="src">priminfo.admin.ch</span></li>
-            <li><a href="https://www.ge.ch/choisir-mon-assurance-maladie" target="_blank" rel="noopener">Guide assurance maladie — Genève</a> <span class="src">ge.ch</span></li>
-          </ul>
-          <div class="encart"><strong>Conseil :</strong> Si LAMal, vérifiez que votre complémentaire couvre les soins en France.</div>
-          <button class="card-cta" onclick="openChat()">Besoin d'un avis ? →</button>
-        </div>
-      </div>
-    </section>
-    <section id="teletravail">
-      <h2 class="stitle">Télétravail transfrontalier</h2>
-      <p class="ssub">Les seuils 2026 et leurs conséquences.</p>
-      <div class="grid-2">
-        <div class="card">
-          <span class="card-tag tag-travail">Seuils 2026</span>
-          <h3>40% fiscal, 49.9% social</h3>
-          <p>Deux seuils coexistent avec des conséquences différentes.</p>
-          <div class="table-wrap">
-            <table>
-              <tr><th>Seuil</th><th>Domaine</th><th>Conséquence si dépassé</th></tr>
-              <tr><td><strong>40%</strong></td><td>Fiscalité</td><td>Jours imposables en France</td></tr>
-              <tr><td><strong>49.9%</strong></td><td>Assurances</td><td>Perte AVS/LPP suisse</td></tr>
-            </table>
-          </div>
-          <ul class="link-list">
-            <li><a href="https://www.ge.ch/imposition-du-teletravail-personnes-frontalieres" target="_blank" rel="noopener">Imposition télétravail frontaliers</a> <span class="src">ge.ch</span></li>
-            <li><a href="https://www.bsv.admin.ch/bsv/fr/home/sozialversicherungen/int/grundlagen-und-abkommen/telearbeit.html" target="_blank" rel="noopener">Télétravail et assurances sociales</a> <span class="src">bsv.admin.ch</span></li>
-          </ul>
-          <div class="encart-rouge encart"><strong>Piège :</strong> Dépasser 49.9% = perte du 2ème pilier suisse.</div>
-          <button class="card-cta" onclick="openChat()">Calculer mon taux →</button>
-        </div>
-        <div class="card">
-          <span class="card-tag tag-travail">Obligations employeur</span>
-          <h3>Ce que l'employeur doit faire en 2026</h3>
-          <p>Depuis janvier 2026, l'employeur doit tracker les jours de télétravail. Transmission AFC en janvier 2027.</p>
-          <ul class="link-list">
-            <li><a href="https://www.ge.ch/imposition-du-teletravail-personnes-frontalieres" target="_blank" rel="noopener">Obligations employeur — télétravail</a> <span class="src">ge.ch</span></li>
-          </ul>
-          <button class="card-cta" onclick="openChat()">Questions télétravail ? →</button>
-        </div>
-      </div>
-    </section>
-    <section id="prevoyance">
-      <h2 class="stitle">Prévoyance et retraite</h2>
-      <p class="ssub">AVS, 2ème pilier, 3ème pilier A.</p>
-      <div class="grid-3">
-        <div class="card">
-          <span class="card-tag tag-prevoyance">AVS / 1er pilier</span>
-          <h3>Rente de vieillesse</h3>
-          <p>Le frontalier cotise à l'AVS suisse. Nouveauté 2026 : 13ème rente AVS.</p>
-          <ul class="link-list">
-            <li><a href="https://www.ahv-iv.ch/fr/" target="_blank" rel="noopener">Centre d'information AVS/AI</a> <span class="src">ahv-iv.ch</span></li>
-            <li><a href="https://www.bsv.admin.ch/bsv/fr/home/sozialversicherungen/ahv.html" target="_blank" rel="noopener">AVS — OFAS</a> <span class="src">bsv.admin.ch</span></li>
-          </ul>
-        </div>
-        <div class="card">
-          <span class="card-tag tag-prevoyance">LPP / 2ème pilier</span>
-          <h3>Prévoyance professionnelle</h3>
-          <p>Obligatoire dès 22'050 CHF/an. En cas de retour France : capital bloqué.</p>
-          <ul class="link-list">
-            <li><a href="https://www.bsv.admin.ch/bsv/fr/home/assurances-sociales/bv.html" target="_blank" rel="noopener">Prévoyance LPP — OFAS</a> <span class="src">bsv.admin.ch</span></li>
-            <li><a href="https://www.fedlex.admin.ch/eli/cc/1982/196_196_196/fr" target="_blank" rel="noopener">Loi LPP</a> <span class="src">Fedlex</span></li>
-          </ul>
-        </div>
-        <div class="card">
-          <span class="card-tag tag-prevoyance">3ème pilier A</span>
-          <h3>Épargne retraite déductible</h3>
-          <p>Plafond 2026 : 7'258 CHF. Déductible via DRIS ou TOU.</p>
-          <div class="encart-vert encart"><strong>Nouveauté 2026 :</strong> Rachats rétroactifs sur 10 ans.</div>
-          <ul class="link-list">
-            <li><a href="https://www.bsv.admin.ch/bsv/fr/home.html" target="_blank" rel="noopener">OFAS</a> <span class="src">bsv.admin.ch</span></li>
-          </ul>
-        </div>
-      </div>
-    </section>
-    <section id="pratique">
-      <h2 class="stitle">Vie pratique du frontalier</h2>
-      <p class="ssub">Permis G, transport, douanes.</p>
-      <div class="grid-3">
-        <div class="card">
-          <span class="card-tag tag-pratique">Permis G</span>
-          <h3>Obtenir et renouveler son permis</h3>
-          <p>Valable 5 ans. Condition : résider dans la zone frontalière.</p>
-          <ul class="link-list">
-            <li><a href="https://www.sem.admin.ch/sem/fr/home/themen/aufenthalt/eu_efta/ausweis_g_eu_efta.html" target="_blank" rel="noopener">Permis G — SEM</a> <span class="src">sem.admin.ch</span></li>
-            <li><a href="https://www.ge.ch/demander-permis-travail-frontalier" target="_blank" rel="noopener">Demander un permis frontalier — Genève</a> <span class="src">ge.ch</span></li>
-          </ul>
-        </div>
-        <div class="card">
-          <span class="card-tag tag-transport">Transport</span>
-          <h3>Se déplacer</h3>
-          <p>Léman Express, TPG, P+R.</p>
-          <ul class="link-list">
-            <li><a href="https://www.lemanexpress.ch/" target="_blank" rel="noopener">Léman Express</a> <span class="src">lemanexpress.ch</span></li>
-            <li><a href="https://www.tpg.ch/" target="_blank" rel="noopener">TPG</a> <span class="src">tpg.ch</span></li>
-            <li><a href="https://www.unireso.com/" target="_blank" rel="noopener">Unireso</a> <span class="src">unireso.com</span></li>
-            <li><a href="https://www.ge.ch/dossier/mobilite-geneve" target="_blank" rel="noopener">Mobilité Genève — P+R</a> <span class="src">ge.ch</span></li>
-          </ul>
-        </div>
-        <div class="card">
-          <span class="card-tag tag-pratique">Douanes</span>
-          <h3>Franchises</h3>
-          <p>300 CHF/personne/jour.</p>
-          <ul class="link-list">
-            <li><a href="https://www.bazg.admin.ch/bazg/fr/home.html" target="_blank" rel="noopener">Office fédéral de la douane</a> <span class="src">bazg.admin.ch</span></li>
-          </ul>
-        </div>
-        <div class="card" style="grid-column:1/-1">
-          <span class="card-tag tag-pratique">Checklist</span>
-          <h3>Les 12 démarches du nouveau frontalier</h3>
-          <ol class="checklist">
-            <li>Signer le contrat de travail suisse</li>
-            <li>Demander le permis G via ge.ch</li>
-            <li>Choisir LAMal ou CMU dans les 3 mois — <strong>irrévocable</strong></li>
-            <li>Ouvrir un compte bancaire suisse</li>
-            <li>Remplir la déclaration impôt à la source</li>
-            <li>S'affilier AVS/AI (automatique)</li>
-            <li>Vérifier affiliation 2ème pilier</li>
-            <li>Ouvrir un 3ème pilier A</li>
-            <li>Négocier le télétravail (max 40%)</li>
-            <li>Organiser le transport</li>
-            <li>Déclarer revenus suisses en France (2047)</li>
-            <li>Demander DRIS ou TOU avant le 31 mars</li>
-          </ol>
-          <button class="card-cta" onclick="openChat()">Questions sur une étape ? →</button>
-        </div>
-      </div>
-    </section>
-    <section>
-      <h2 class="stitle">Calendrier fiscal 2026</h2>
-      <p class="ssub">Les échéances clés.</p>
-      <div class="card" style="margin-bottom:56px">
-        <div class="timeline">
-          <div class="tl-item"><div class="tl-date">Janvier 2026</div><div class="tl-text">Nouveaux barèmes. Début tracking télétravail. Plafond 3a = 7'258 CHF.</div></div>
-          <div class="tl-item"><div class="tl-date">31 Mars 2026</div><div class="tl-text">Date limite DRIS/TOU sur revenus 2025.</div></div>
-          <div class="tl-item"><div class="tl-date">Avril–Mai 2026</div><div class="tl-text">Déclaration revenus France (formulaire 2047).</div></div>
-          <div class="tl-item"><div class="tl-date">Juin 2026</div><div class="tl-text">Bordereaux de rectification (si DRIS/TOU).</div></div>
-          <div class="tl-item"><div class="tl-date">Décembre 2026</div><div class="tl-text">Régularisation annuelle. Dernier mois pour 3a.</div></div>
-          <div class="tl-item"><div class="tl-date">Janvier 2027</div><div class="tl-text">Première transmission automatique des données.</div></div>
-        </div>
-      </div>
-    </section>
+    <h2 class="stitle" id="fiscalite">Fiscalité du Frontalier</h2>
+    <p class="ssub">Imposition à la source, quasi-résident, déclaration France — tout ce qu'il faut savoir.</p>
+    <div class="grid-2">
+      <article class="card">
+        <span class="card-tag tag-fiscal">Impôt à la source</span>
+        <h3>Imposition à la Source — Canton de Genève</h3>
+        <p>Genève impose les frontaliers à la source selon des barèmes (A, B, C, H). Rétrocession de 3.5% à la France.</p>
+        <ul class="link-list">
+          <li><a href="https://www.ge.ch/impot-source" target="_blank">Impôt à la source — ge.ch</a> <span class="src">Canton de Genève</span></li>
+          <li><a href="https://www.ge.ch/document/bareme-impot-source" target="_blank">Barèmes impôt source 2026</a> <span class="src">ge.ch</span></li>
+          <li><a href="https://www.fedlex.admin.ch/eli/cc/1967/1232_1280_1268/fr" target="_blank">Convention fiscale franco-suisse</a> <span class="src">Fedlex</span></li>
+        </ul>
+        <div class="table-wrap"><table><tr><th>Barème</th><th>Situation</th><th>Application</th></tr><tr><td>A</td><td>Célibataire</td><td>Sans enfant à charge</td></tr><tr><td>B</td><td>Marié, 1 revenu</td><td>Conjoint sans activité</td></tr><tr><td>C</td><td>Marié, 2 revenus</td><td>Les deux travaillent</td></tr><tr><td>H</td><td>Famille monoparentale</td><td>Parent seul avec enfant</td></tr></table></div>
+        <button class="card-cta" onclick="openMyrtille()">Quel barème pour moi ? →</button>
+      </article>
+      <article class="card">
+        <span class="card-tag tag-fiscal">Quasi-résident</span>
+        <h3>Statut Quasi-Résident — Taxation Ordinaire</h3>
+        <p>Si 90% de vos revenus mondiaux proviennent de Suisse, vous pouvez déduire vos frais réels (3a, frais de garde, etc.).</p>
+        <ul class="link-list">
+          <li><a href="https://www.ge.ch/rectification-impot-source-quasi-resident" target="_blank">Demande quasi-résident — ge.ch</a> <span class="src">Canton de Genève</span></li>
+          <li><a href="https://www.ge.ch/document/formulaire-demande-quasi-resident" target="_blank">Formulaire quasi-résident 2026</a> <span class="src">ge.ch</span></li>
+        </ul>
+        <div class="encart"><strong>💡 Astuce :</strong> Faites une simulation avant de demander le statut. Si votre conjoint a des revenus en France, le seuil de 90% peut ne pas être atteint.</div>
+        <button class="card-cta" onclick="openMyrtille()">Suis-je éligible ? →</button>
+      </article>
+    </div>
+
+    <h2 class="stitle" id="assurance">Assurance Maladie</h2>
+    <p class="ssub">LAMal ou CMU ? Un choix crucial et irrévocable dans les 3 mois.</p>
+    <div class="grid-2">
+      <article class="card">
+        <span class="card-tag tag-sante">LAMal vs CMU</span>
+        <h3>Droit d'Option : LAMal ou CMU-PUMa</h3>
+        <p>Le frontalier a 3 mois pour exercer son droit d'option. Ce choix est irrévocable (sauf exceptions).</p>
+        <ul class="link-list">
+          <li><a href="https://www.ge.ch/frontalier-vous-etes-nouveau-salarie-geneve" target="_blank">Affiliation frontalier — ge.ch</a> <span class="src">Canton de Genève</span></li>
+          <li><a href="https://www.ameli.fr/assure/droits-demarches/europe-international/travail-etranger/frontalier-suisse" target="_blank">Frontalier suisse — ameli.fr</a> <span class="src">Assurance Maladie FR</span></li>
+          <li><a href="https://www.priminfo.admin.ch/fr" target="_blank">Comparateur primes LAMal</a> <span class="src">OFSP</span></li>
+        </ul>
+        <div class="table-wrap"><table><tr><th>Critère</th><th>LAMal 🇨🇭</th><th>CMU-PUMa 🇫🇷</th></tr><tr><td>Soins en Suisse</td><td class="highlight-cell">✓ Accès direct</td><td>Formulaire S1</td></tr><tr><td>Soins en France</td><td>Carte européenne</td><td class="highlight-cell">✓ Accès direct</td></tr><tr><td>Prime mensuelle</td><td>~400-600 CHF</td><td>8% du RFR</td></tr><tr><td>Franchise</td><td>300-2500 CHF</td><td>Aucune</td></tr></table></div>
+        <button class="card-cta" onclick="openMyrtille()">Comparer LAMal vs CMU →</button>
+      </article>
+      <article class="card">
+        <span class="card-tag tag-sante">Formulaires</span>
+        <h3>Démarches & Formulaires Clés</h3>
+        <p>Les documents essentiels pour votre affiliation et vos soins transfrontaliers.</p>
+        <ul class="link-list">
+          <li><a href="https://www.ge.ch/document/formulaire-choix-assurance-maladie-frontalier" target="_blank">Formulaire droit d'option</a> <span class="src">Canton de Genève</span></li>
+          <li><a href="https://www.ameli.fr/assure/adresses-et-contacts/lobtention-dun-formulaire/formulaire-e106-s1" target="_blank">Formulaire S1/E106</a> <span class="src">Pour soins CH si CMU</span></li>
+          <li><a href="https://www.service-public.fr/particuliers/vosdroits/F407" target="_blank">Demande CEAM</a> <span class="src">Carte européenne</span></li>
+        </ul>
+        <div class="encart encart-rouge"><strong>⚠️ Attention :</strong> Le délai de 3 mois court à partir du 1er jour de travail en Suisse. Passé ce délai, l'affiliation LAMal est automatique et définitive.</div>
+        <button class="card-cta" onclick="openMyrtille()">Vérifier mes délais →</button>
+      </article>
+    </div>
+
+    <h2 class="stitle" id="teletravail">Télétravail Frontalier</h2>
+    <p class="ssub">Seuils 2026, fiscalité, assurances sociales.</p>
+    <div class="grid-2">
+      <article class="card">
+        <span class="card-tag tag-travail">Seuils 2026</span>
+        <h3>Règles du Télétravail Franco-Suisse</h3>
+        <p>L'accord bilatéral fixe les seuils au-delà desquels le télétravail impacte votre fiscalité et vos assurances sociales.</p>
+        <ul class="link-list">
+          <li><a href="https://www.ge.ch/imposition-du-teletravail-personnes-frontalieres" target="_blank">Télétravail frontaliers — ge.ch</a> <span class="src">Canton de Genève</span></li>
+          <li><a href="https://www.bsv.admin.ch/bsv/fr/home/assurances-sociales/int/base-teletravail.html" target="_blank">Assurances sociales & télétravail</a> <span class="src">OFAS</span></li>
+        </ul>
+        <div class="table-wrap"><table><tr><th>Domaine</th><th>Seuil 2026</th><th>Conséquence si dépassé</th></tr><tr><td>Fiscalité</td><td class="highlight-cell">40% max</td><td>Imposition en France</td></tr><tr><td>Assurances sociales</td><td class="highlight-cell">49.9% max</td><td>Sécu FR au lieu AVS</td></tr></table></div>
+        <div class="encart encart-vert"><strong>✓ Bonne nouvelle :</strong> L'accord de 2023 a relevé le seuil fiscal de 25% à 40%.</div>
+        <button class="card-cta" onclick="openMyrtille()">Calculer mon quota →</button>
+      </article>
+      <article class="card">
+        <span class="card-tag tag-travail">Permis G</span>
+        <h3>Permis G — Frontalier</h3>
+        <p>Le permis G autorise un ressortissant UE/AELE à travailler en Suisse tout en résidant dans un pays voisin.</p>
+        <ul class="link-list">
+          <li><a href="https://www.sem.admin.ch/sem/fr/home/themen/fza_schweiz-eu-efta/eu-efta_buerger_schweiz/ausweis_g__grenzgaenger.html" target="_blank">Permis G — SEM</a> <span class="src">Secrétariat aux migrations</span></li>
+          <li><a href="https://www.ge.ch/demander-permis-travail-frontalier" target="_blank">Demande permis G — ge.ch</a> <span class="src">Canton de Genève</span></li>
+        </ul>
+        <div class="encart"><strong>📌 Validité :</strong> 5 ans renouvelable. Le retour hebdomadaire au domicile est une condition légale.</div>
+        <button class="card-cta" onclick="openMyrtille()">Questions permis G →</button>
+      </article>
+    </div>
+
+    <h2 class="stitle">Prévoyance & Pratique</h2>
+    <p class="ssub">3ème pilier, change, transport — les outils du quotidien frontalier.</p>
+    <div class="grid-3">
+      <article class="card">
+        <span class="card-tag tag-prevoyance">3ème Pilier</span>
+        <h3>Prévoyance Pilier 3a</h3>
+        <p>Les frontaliers imposés à la source peuvent déduire leurs cotisations 3a via la rectification d'impôt ou le statut quasi-résident.</p>
+        <ul class="link-list">
+          <li><a href="https://www.bsv.admin.ch/bsv/fr/home/assurances-sociales/bv/grundlagen-und-gesetze/grundlagen/saeule-3a.html" target="_blank">Pilier 3a — OFAS</a> <span class="src">Confédération</span></li>
+        </ul>
+        <div class="encart"><strong>Plafond 2026 :</strong> CHF 7'258 (salariés avec 2ème pilier)</div>
+        <button class="card-cta" onclick="openMyrtille()">Optimiser ma prévoyance →</button>
+      </article>
+      <article class="card">
+        <span class="card-tag tag-pratique">Change</span>
+        <h3>Change CHF/EUR</h3>
+        <p>Comparez les taux et trouvez les meilleures options pour convertir votre salaire suisse.</p>
+        <ul class="link-list">
+          <li><a href="https://www.snb.ch/fr/the-snb/mandates-goals/statistics/statistics/current-interest-exchange-rates" target="_blank">Taux de référence — BNS</a> <span class="src">Banque nationale</span></li>
+          <li><a href="https://wise.com/fr/currency-converter/chf-to-eur-rate" target="_blank">Convertisseur Wise</a> <span class="src">Taux réel</span></li>
+        </ul>
+        <button class="card-cta" onclick="openMyrtille()">Conseils change →</button>
+      </article>
+      <article class="card">
+        <span class="card-tag tag-pratique">Transport</span>
+        <h3>Transport Transfrontalier</h3>
+        <p>Léman Express, TPG, abonnements transfrontaliers.</p>
+        <ul class="link-list">
+          <li><a href="https://www.lemanexpress.ch/" target="_blank">Léman Express</a> <span class="src">RER franco-suisse</span></li>
+          <li><a href="https://www.tpg.ch/fr/titres-et-tarifs/abonnements" target="_blank">Abonnements TPG</a> <span class="src">Transports genevois</span></li>
+          <li><a href="https://www.unireso.com/" target="_blank">Unireso — Titre unique</a> <span class="src">Zone tarifaire</span></li>
+        </ul>
+        <button class="card-cta" onclick="openMyrtille()">Questions transport →</button>
+      </article>
+    </div>
+
     <section id="faq" class="faq-section">
-      <h2 class="stitle">Questions fréquentes</h2>
-      <p class="ssub">Les réponses aux questions les plus posées.</p>
-      <div class="faq-item">
-        <div class="faq-q">Comment fonctionne l'impôt à la source à Genève ?</div>
-        <div class="faq-a">Les frontaliers sont imposés sur leur salaire en Suisse selon leur situation familiale (barèmes A, B, C, H). Genève rétrocède 3.5% à la France. Le frontalier déclare ensuite en France avec crédit d'impôt. Barèmes sur <a href="https://www.ge.ch/document/baremes-2026-perception-impot-source" target="_blank">ge.ch</a>.</div>
-      </div>
-      <div class="faq-item">
-        <div class="faq-q">Puis-je changer de LAMal à CMU ?</div>
-        <div class="faq-a">Le choix initial est irrévocable sauf exceptions (fin contrat, changement statut, déménagement). Passer de CMU à LAMal est quasi impossible. Infos sur <a href="https://www.ge.ch/choisir-mon-assurance-maladie" target="_blank">ge.ch</a>.</div>
-      </div>
-      <div class="faq-item">
-        <div class="faq-q">Que se passe-t-il si je dépasse 40% de télétravail ?</div>
-        <div class="faq-a">Les jours au-delà de 40% deviennent imposables en France. Au-delà de 49.9%, vous risquez de perdre l'affiliation AVS/LPP suisse. Détails sur <a href="https://www.ge.ch/imposition-du-teletravail-personnes-frontalieres" target="_blank">ge.ch</a>.</div>
-      </div>
-      <div class="faq-item">
-        <div class="faq-q">Le frontalier peut-il cotiser au 3ème pilier A ?</div>
-        <div class="faq-a">Oui, si imposé à la source en Suisse. Plafond 2026 : 7'258 CHF. Nouveauté : rachats rétroactifs sur 10 ans. Déductible via DRIS ou TOU.</div>
-      </div>
-      <div class="faq-item">
-        <div class="faq-q">Que devient mon 2ème pilier si je retourne en France ?</div>
-        <div class="faq-a">Le capital reste bloqué sur un compte de libre passage jusqu'à la retraite. Exceptions : achat résidence principale ou création d'entreprise. Infos sur <a href="https://www.bsv.admin.ch/bsv/fr/home/assurances-sociales/bv.html" target="_blank">bsv.admin.ch</a>.</div>
-      </div>
-      <div class="faq-item">
-        <div class="faq-q">DRIS ou TOU : laquelle choisir ?</div>
-        <div class="faq-a">La DRIS permet des déductions partielles. La TOU donne accès à toutes les déductions d'un résident si 90%+ des revenus sont imposés en Suisse. Date limite : 31 mars.</div>
-      </div>
+      <h2 class="stitle">Questions Fréquentes</h2>
+      <p class="ssub">Les réponses aux questions les plus posées par les frontaliers.</p>
+      <div class="faq-item"><div class="faq-q">Comment fonctionne l'impôt à la source pour les frontaliers à Genève ?</div><div class="faq-a">Les frontaliers travaillant à Genève sont imposés à la source en Suisse selon leur situation familiale (barèmes A, B, C, H). Genève rétrocède 3.5% à la France. Détails sur <a href="https://www.ge.ch/impot-source" target="_blank">ge.ch</a>.</div></div>
+      <div class="faq-item"><div class="faq-q">LAMal ou CMU : comment choisir ?</div><div class="faq-a">Le choix dépend de votre situation. <strong>LAMal</strong> : accès direct aux soins en Suisse, prime fixe. <strong>CMU-PUMa</strong> : cotisation proportionnelle au revenu, accès direct en France. Ce choix est irrévocable. Plus d'infos sur <a href="https://www.ameli.fr/assure/droits-demarches/europe-international/travail-etranger/frontalier-suisse" target="_blank">ameli.fr</a>.</div></div>
+      <div class="faq-item"><div class="faq-q">Combien de jours de télétravail en 2026 ?</div><div class="faq-a"><strong>Fiscalité : 40% max</strong> — au-delà, les jours travaillés en France sont imposables en France. <strong>Assurances sociales : 49.9% max</strong>. Infos sur <a href="https://www.ge.ch/imposition-du-teletravail-personnes-frontalieres" target="_blank">ge.ch</a>.</div></div>
+      <div class="faq-item"><div class="faq-q">Puis-je déduire mon 3ème pilier A en tant que frontalier ?</div><div class="faq-a">Oui, via la rectification d'impôt à la source ou le statut quasi-résident. Plafond 2026 : CHF 7'258. Formulaires sur <a href="https://www.ge.ch/rectification-impot-source-quasi-resident" target="_blank">ge.ch</a>.</div></div>
+      <div class="faq-item"><div class="faq-q">Qu'est-ce que le statut quasi-résident ?</div><div class="faq-a">Le statut quasi-résident permet de bénéficier de la taxation ordinaire si 90% minimum de vos revenus mondiaux proviennent de Suisse. Demande annuelle avant le 31 mars. Infos sur <a href="https://www.ge.ch/rectification-impot-source-quasi-resident" target="_blank">ge.ch</a>.</div></div>
     </section>
-    <section id="diagnostic" class="diag">
-      <h2>Diagnostic transfrontalier gratuit</h2>
-      <p>Notre assistant analyse votre situation en 3 minutes.</p>
-      <button class="diag-cta" onclick="openChat()">Lancer mon diagnostic →</button>
+
+    <section class="diag">
+      <h2>Diagnostic Frontalier Gratuit</h2>
+      <p>Myrtille analyse votre situation en 3 minutes : fiscalité, assurance, télétravail, prévoyance.</p>
+      <button class="glass-myrtille-cta glass-myrtille-cta-dark" onclick="openMyrtille()">
+        <span class="berry">🫐</span>
+        Lancer mon diagnostic
+        <span class="pulse-dot"></span>
+      </button>
       <div class="diag-steps">
-        <div class="diag-step"><div class="sn">1</div><span>Votre situation</span></div>
-        <div class="diag-step"><div class="sn">2</div><span>Analyse express</span></div>
-        <div class="diag-step"><div class="sn">3</div><span>Orientation expert</span></div>
+        <div class="diag-step"><div class="sn">1</div><span>Quelques questions</span></div>
+        <div class="diag-step"><div class="sn">2</div><span>Analyse personnalisée</span></div>
+        <div class="diag-step"><div class="sn">3</div><span>Ressources & contacts</span></div>
       </div>
     </section>
   </main>
   <footer class="footer">
     <div class="footer-brand">Finance Léman</div>
-    <p>Terminal de ressources pour travailleurs frontaliers du bassin lémanique.<br>Informations à titre indicatif — consultez un professionnel.<br>Sources : portails officiels fédéraux, cantonaux et français.</p>
-    <p style="margin-top:14px"><a href="#fiscalite">Fiscalité</a> · <a href="#assurance">Assurance</a> · <a href="#teletravail">Télétravail</a> · <a href="#prevoyance">Prévoyance</a> · <a href="#pratique">Vie pratique</a> · <a href="#faq">FAQ</a></p>
+    <p>Terminal de ressources pour travailleurs frontaliers du bassin lémanique.<br>Informations à titre indicatif — consultez un professionnel.</p>
+    <p style="margin-top:14px"><a href="https://finance-leman.ch">Accueil</a> · <a href="#fiscalite">Fiscalité</a> · <a href="#assurance">Assurance</a> · <a href="#teletravail">Télétravail</a> · <a href="#faq">FAQ</a> · <a href="javascript:void(0)" onclick="openMyrtille()">Diagnostic</a></p>
     <p style="margin-top:16px;font-size:0.72rem">© 2026 Finance Léman — Leman Digital Asset</p>
   </footer>
   <script>
     document.querySelectorAll('.faq-q').forEach(q=>{q.addEventListener('click',()=>{const item=q.parentElement;const isOpen=item.classList.contains('open');document.querySelectorAll('.faq-item').forEach(i=>i.classList.remove('open'));if(!isOpen)item.classList.add('open')})});
-    function openChat(){if(window.chatbase){try{window.chatbase('open')}catch(e){}}}
-  </script>
-  <script>
-    (function(){if(!window.chatbase||window.chatbase("getState")!=="initialized"){window.chatbase=(...arguments)=>{if(!window.chatbase.q){window.chatbase.q=[]}window.chatbase.q.push(arguments)};window.chatbase=new Proxy(window.chatbase,{get(target,prop){if(prop==="q"){return target.q}return(...args)=>target(prop,...args)}})}const onLoad=function(){const script=document.createElement("script");script.src="https://www.chatbase.co/embed.min.js";script.id="qeA-Jg6N-j2MHtO6_D5cj";script.domain="www.chatbase.co";document.body.appendChild(script)};if(document.readyState==="complete"){onLoad()}else{window.addEventListener("load",onLoad)}})();
+    const API_URL='https://web-production-4e8e0.up.railway.app';const HUB='finance-leman';let sessionId='session_'+Math.random().toString(36).substr(2,9)+'_'+Date.now();
+    function openMyrtille(){document.getElementById('myrtilleOverlay').classList.add('open');document.getElementById('myrtilleInput').focus()}
+    function closeMyrtille(event){if(!event||event.target===document.getElementById('myrtilleOverlay')){document.getElementById('myrtilleOverlay').classList.remove('open')}}
+    function handleKeyPress(event){if(event.key==='Enter')sendMessage()}
+    async function sendMessage(){const input=document.getElementById('myrtilleInput');const message=input.value.trim();if(!message)return;const messagesDiv=document.getElementById('myrtilleMessages');const sendBtn=document.getElementById('sendBtn');messagesDiv.innerHTML+=`<div class="msg user">${escapeHtml(message)}</div>`;input.value='';sendBtn.disabled=true;messagesDiv.innerHTML+=`<div class="msg typing" id="typingIndicator"><div class="dots"><div class="dot"></div><div class="dot"></div><div class="dot"></div></div></div>`;messagesDiv.scrollTop=messagesDiv.scrollHeight;try{const response=await fetch(`${API_URL}/api/chat`,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({message,session_id:sessionId,hub:HUB})});const data=await response.json();document.getElementById('typingIndicator')?.remove();messagesDiv.innerHTML+=`<div class="msg assistant">${formatResponse(data.response)}</div>`}catch(error){document.getElementById('typingIndicator')?.remove();messagesDiv.innerHTML+=`<div class="msg assistant">Désolé, une erreur s'est produite. Veuillez réessayer.</div>`}sendBtn.disabled=false;messagesDiv.scrollTop=messagesDiv.scrollHeight}
+    function escapeHtml(text){const div=document.createElement('div');div.textContent=text;return div.innerHTML}
+    function formatResponse(text){return text.replace(/\n/g,'<br>').replace(/\*\*(.*?)\*\*/g,'<strong>$1</strong>').replace(/\[(.*?)\]\((.*?)\)/g,'<a href="$2" target="_blank" rel="noopener">$1</a>')}
   </script>
 </body>
 </html>
