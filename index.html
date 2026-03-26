@@ -19,9 +19,6 @@
     *{margin:0;padding:0;box-sizing:border-box}
     body{font-family:'DM Sans',sans-serif;background:var(--paper);color:var(--ink);line-height:1.65;font-size:16px;-webkit-font-smoothing:antialiased}
 
-    /* ══════════════════════════════════════════════════════════════════
-       GLASS MYRTILLE BUTTON - Style Apple iOS
-    ══════════════════════════════════════════════════════════════════ */
     .glass-myrtille-cta{display:inline-flex;align-items:center;justify-content:center;gap:10px;padding:16px 32px;font-family:inherit;font-size:0.95rem;font-weight:700;color:white;background:rgba(124,58,237,0.25);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);border:1px solid rgba(124,58,237,0.4);border-radius:14px;cursor:pointer;transition:all 0.3s ease;box-shadow:0 0 20px rgba(124,58,237,0.15),0 8px 32px rgba(0,0,0,0.1);text-decoration:none;position:relative;overflow:hidden}
     .glass-myrtille-cta::before{content:'';position:absolute;top:0;left:0;right:0;height:50%;background:linear-gradient(180deg,rgba(255,255,255,0.15) 0%,transparent 100%);pointer-events:none}
     .glass-myrtille-cta:hover{background:rgba(124,58,237,0.35);border-color:rgba(124,58,237,0.6);box-shadow:0 0 30px rgba(124,58,237,0.25),0 12px 40px rgba(0,0,0,0.15);transform:translateY(-2px)}
@@ -31,9 +28,6 @@
     .glass-myrtille-cta-dark{background:rgba(124,58,237,0.35);border-color:rgba(124,58,237,0.5)}
     .glass-myrtille-cta-dark:hover{background:rgba(124,58,237,0.45);border-color:rgba(124,58,237,0.7)}
 
-    /* ══════════════════════════════════════════════════════════════════
-       MYRTILLE CHAT MODAL
-    ══════════════════════════════════════════════════════════════════ */
     .myrtille-overlay{display:none;position:fixed;top:0;left:0;right:0;bottom:0;background:rgba(0,0,0,0.5);z-index:1000;backdrop-filter:blur(4px)}
     .myrtille-overlay.open{display:flex;align-items:center;justify-content:center}
     .myrtille-chat{background:white;width:90%;max-width:480px;height:80vh;max-height:620px;border-radius:16px;display:flex;flex-direction:column;box-shadow:0 25px 50px rgba(0,0,0,0.25);overflow:hidden;animation:slideUp 0.3s ease}
@@ -64,7 +58,19 @@
     .myrtille-footer{padding:10px 16px;text-align:center;font-size:0.72rem;color:#9ca3af;background:white;border-top:1px solid #f3f4f6}
     .myrtille-footer a{color:var(--myrtille);text-decoration:none;font-weight:500}
 
-    /* ── LAYOUT ── */
+    /* CONSENT SCREEN */
+    .myrtille-consent{display:flex;flex-direction:column;align-items:center;justify-content:center;padding:40px 24px;text-align:center;flex:1;background:#f9fafb}
+    .myrtille-consent .consent-icon{width:72px;height:72px;background:linear-gradient(135deg,var(--myrtille) 0%,var(--myrtille-dark) 100%);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:2rem;margin-bottom:20px;box-shadow:0 8px 24px rgba(124,58,237,0.3)}
+    .myrtille-consent h4{font-size:1.1rem;color:var(--ink);margin-bottom:12px;font-weight:700}
+    .myrtille-consent p{font-size:0.85rem;color:var(--gris);line-height:1.6;margin-bottom:24px;max-width:320px}
+    .myrtille-consent .consent-link{color:var(--myrtille);text-decoration:underline}
+    .myrtille-consent .consent-btn{background:var(--myrtille);color:white;border:none;padding:14px 32px;border-radius:12px;font-size:0.9rem;font-weight:600;cursor:pointer;transition:all 0.2s;display:flex;align-items:center;gap:8px}
+    .myrtille-consent .consent-btn:hover{background:var(--myrtille-dark);transform:translateY(-1px)}
+    .myrtille-consent .consent-btn svg{width:18px;height:18px}
+    .myrtille-chat-content{display:none;flex-direction:column;flex:1}
+    .myrtille-chat-content.visible{display:flex}
+    .myrtille-consent.hidden{display:none}
+
     .header{background:var(--bleu);position:sticky;top:0;z-index:100;box-shadow:0 2px 12px rgba(0,0,0,0.2)}
     .header-inner{max-width:var(--max-w);margin:0 auto;padding:14px 24px;display:flex;align-items:center;justify-content:space-between}
     .logo{font-family:'Source Serif 4',serif;font-size:1.3rem;font-weight:700;color:#fff;text-decoration:none}
@@ -141,7 +147,6 @@
   </style>
 </head>
 <body>
-  <!-- ════ MYRTILLE CHAT OVERLAY ════ -->
   <div class="myrtille-overlay" id="myrtilleOverlay" onclick="closeMyrtille(event)">
     <div class="myrtille-chat" onclick="event.stopPropagation()">
       <div class="myrtille-header">
@@ -149,14 +154,29 @@
         <div class="info"><h3>Myrtille</h3><span>Assistante transfrontalière</span></div>
         <button class="close" onclick="closeMyrtille()">×</button>
       </div>
-      <div class="myrtille-messages" id="myrtilleMessages">
-        <div class="msg assistant">Bonjour ! Je suis Myrtille, votre assistante pour toutes les questions des travailleurs frontaliers du bassin lémanique. 🫐<br><br>Fiscalité, LAMal/CMU, télétravail, prévoyance... Comment puis-je vous aider ?</div>
+      
+      <!-- CONSENT SCREEN -->
+      <div class="myrtille-consent" id="myrtilleConsent">
+        <div class="consent-icon">🔒</div>
+        <h4>Vos données sont protégées</h4>
+        <p>Vos échanges avec Myrtille sont confidentiels et sécurisés. En continuant, vous acceptez notre <a href="confidentialite.html" class="consent-link" target="_blank">politique de confidentialité</a>.</p>
+        <button class="consent-btn" onclick="acceptConsent()">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12l5 5L20 7"/></svg>
+          Accepter et continuer
+        </button>
       </div>
-      <div class="myrtille-input">
-        <input type="text" id="myrtilleInput" placeholder="Posez votre question..." onkeypress="handleKeyPress(event)">
-        <button onclick="sendMessage()" id="sendBtn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z"/></svg></button>
+      
+      <!-- CHAT CONTENT -->
+      <div class="myrtille-chat-content" id="myrtilleChatContent">
+        <div class="myrtille-messages" id="myrtilleMessages">
+          <div class="msg assistant">Bonjour ! Je suis Myrtille, votre assistante pour toutes les questions des travailleurs frontaliers du bassin lémanique. 🫐<br><br>Fiscalité, LAMal/CMU, télétravail, prévoyance... Comment puis-je vous aider ?</div>
+        </div>
+        <div class="myrtille-input">
+          <input type="text" id="myrtilleInput" placeholder="Posez votre question..." onkeypress="handleKeyPress(event)">
+          <button onclick="sendMessage()" id="sendBtn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z"/></svg></button>
+        </div>
+        <div class="myrtille-footer">🫐 Myrtille by <a href="https://finance-leman.ch">LDA</a> — <a href="confidentialite.html" target="_blank">Confidentialité</a></div>
       </div>
-      <div class="myrtille-footer">🫐 Myrtille by <a href="https://finance-leman.ch">LDA</a> — Propulsé par IA</div>
     </div>
   </div>
 
@@ -338,13 +358,19 @@
   <footer class="footer">
     <div class="footer-brand">Finance Léman</div>
     <p>Terminal de ressources pour travailleurs frontaliers du bassin lémanique.<br>Informations à titre indicatif — consultez un professionnel.</p>
-    <p style="margin-top:14px"><a href="https://finance-leman.ch">Accueil</a> · <a href="#fiscalite">Fiscalité</a> · <a href="#assurance">Assurance</a> · <a href="#teletravail">Télétravail</a> · <a href="#faq">FAQ</a> · <a href="javascript:void(0)" onclick="openMyrtille()">Diagnostic</a></p>
+    <p style="margin-top:14px"><a href="https://finance-leman.ch">Accueil</a> · <a href="#fiscalite">Fiscalité</a> · <a href="#assurance">Assurance</a> · <a href="#teletravail">Télétravail</a> · <a href="#faq">FAQ</a> · <a href="javascript:void(0)" onclick="openMyrtille()">Diagnostic</a> · <a href="confidentialite.html">Confidentialité</a></p>
     <p style="margin-top:16px;font-size:0.72rem">© 2026 Finance Léman — Leman Digital Asset</p>
   </footer>
   <script>
     document.querySelectorAll('.faq-q').forEach(q=>{q.addEventListener('click',()=>{const item=q.parentElement;const isOpen=item.classList.contains('open');document.querySelectorAll('.faq-item').forEach(i=>i.classList.remove('open'));if(!isOpen)item.classList.add('open')})});
-    const API_URL='https://web-production-4e8e0.up.railway.app';const HUB='finance-leman';let sessionId='session_'+Math.random().toString(36).substr(2,9)+'_'+Date.now();
-    function openMyrtille(){document.getElementById('myrtilleOverlay').classList.add('open');document.getElementById('myrtilleInput').focus()}
+    const API_URL='https://web-production-4e8e0.up.railway.app';
+    const HUB='finance-leman';
+    const CONSENT_KEY='myrtille_consent_'+HUB;
+    let sessionId='session_'+Math.random().toString(36).substr(2,9)+'_'+Date.now();
+    
+    function checkConsent(){return localStorage.getItem(CONSENT_KEY)==='accepted'}
+    function acceptConsent(){localStorage.setItem(CONSENT_KEY,'accepted');document.getElementById('myrtilleConsent').classList.add('hidden');document.getElementById('myrtilleChatContent').classList.add('visible');document.getElementById('myrtilleInput').focus()}
+    function openMyrtille(){document.getElementById('myrtilleOverlay').classList.add('open');if(checkConsent()){document.getElementById('myrtilleConsent').classList.add('hidden');document.getElementById('myrtilleChatContent').classList.add('visible');document.getElementById('myrtilleInput').focus()}}
     function closeMyrtille(event){if(!event||event.target===document.getElementById('myrtilleOverlay')){document.getElementById('myrtilleOverlay').classList.remove('open')}}
     function handleKeyPress(event){if(event.key==='Enter')sendMessage()}
     async function sendMessage(){const input=document.getElementById('myrtilleInput');const message=input.value.trim();if(!message)return;const messagesDiv=document.getElementById('myrtilleMessages');const sendBtn=document.getElementById('sendBtn');messagesDiv.innerHTML+=`<div class="msg user">${escapeHtml(message)}</div>`;input.value='';sendBtn.disabled=true;messagesDiv.innerHTML+=`<div class="msg typing" id="typingIndicator"><div class="dots"><div class="dot"></div><div class="dot"></div><div class="dot"></div></div></div>`;messagesDiv.scrollTop=messagesDiv.scrollHeight;try{const response=await fetch(`${API_URL}/api/chat`,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({message,session_id:sessionId,hub:HUB})});const data=await response.json();document.getElementById('typingIndicator')?.remove();messagesDiv.innerHTML+=`<div class="msg assistant">${formatResponse(data.response)}</div>`}catch(error){document.getElementById('typingIndicator')?.remove();messagesDiv.innerHTML+=`<div class="msg assistant">Désolé, une erreur s'est produite. Veuillez réessayer.</div>`}sendBtn.disabled=false;messagesDiv.scrollTop=messagesDiv.scrollHeight}
